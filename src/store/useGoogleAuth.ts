@@ -1,7 +1,7 @@
 import { computed, ref } from 'vue';
 import { defineStore } from 'pinia';
 
-import auth, { GoogleUser, GoogleUserCredential } from '@/services/auth';
+import auth, { GoogleUser, GoogleUserCredential } from '@/services/google-auth';
 import { Nullable } from '@/types/base';
 
 export const useGoogleAuthStore = defineStore('googleAuth', () => {
