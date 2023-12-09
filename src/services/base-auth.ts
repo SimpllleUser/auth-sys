@@ -15,8 +15,8 @@ import {
 import { Nullable } from '@/types/base';
 
 export interface UserParams {
-  email: string
-  password: string
+  email: string;
+  password: string;
 }
 
 export enum AuthActions {
@@ -61,9 +61,18 @@ const getCurrentUer = () => new Promise((resolve, reject) => {
   );
 });
 
+const onChnageAuthState = (
+  nextOrObserver: NextOrObserver<User>,
+  error?: ErrorFn | undefined,
+  completed?: CompleteFn | undefined,
+) => {
+  onAuthStateChanged(getAuth(), nextOrObserver, error, completed);
+};
+
 export default {
   signIn,
   signUp,
   singOut,
   getCurrentUer,
+  onChnageAuthState,
 };

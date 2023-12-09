@@ -1,7 +1,7 @@
 import { computed, ref } from 'vue';
 import { defineStore } from 'pinia';
 
-import auth, { GoogleUser, GoogleUserCredential } from '@/services/google-auth';
+import googleAuthService, { GoogleUser, GoogleUserCredential } from '@/services/google-auth';
 import { Nullable } from '@/types/base';
 
 export const useGoogleAuthStore = defineStore('googleAuth', () => {
@@ -12,7 +12,7 @@ export const useGoogleAuthStore = defineStore('googleAuth', () => {
 
   const signInByGoogle = async () => {
     try {
-      userCredential.value = await auth.signInByGoogle();
+      userCredential.value = await googleAuthService.signIn();
     } catch (e) {
       console.log(e);
     }
@@ -20,23 +20,23 @@ export const useGoogleAuthStore = defineStore('googleAuth', () => {
 
   const singOutUserByGoogle = async () => {
     try {
-      const isResetedAuthSession = await auth.singOutUser();
+      const isResetedAuthSession = await googleAuthService.signOut();
       if (!isResetedAuthSession) return;
       userCredential.value = null;
-    } catch (e) { console.log(e); }
+    } catch (e) {
+      console.log(e);
+    }
   };
 
-  auth.onChnageAuthState((data) => {
-    console.log('onChnageAuthState :: ', { data });
-  });
-
-  // const signIn = () => {};
-
-  // const signUp = () => {};
-
-  // const singOutUser = () => {};
+  const getCurrentUser = googleAuthService.getCurrentUer;
+  const { onChnageAuthState } = googleAuthService;
 
   return {
-    signInByGoogle, singOutUserByGoogle, user, isAuthed,
+    signInByGoogle,
+    singOutUserByGoogle,
+    getCurrentUser,
+    onChnageAuthState,
+    user,
+    isAuthed,
   };
 });

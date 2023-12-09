@@ -1,9 +1,8 @@
-import {
+import firebaseAuth, {
   getAuth,
   GoogleAuthProvider,
   signInWithPopup,
   onAuthStateChanged,
-  signOut,
   UserCredential,
   CompleteFn,
   ErrorFn,
@@ -14,31 +13,43 @@ import {
 export type GoogleUserCredential = UserCredential;
 export type GoogleUser = User;
 
-const signInByGoogle = async (): Promise<GoogleUserCredential> => {
+const signIn = async (): Promise<GoogleUserCredential> => {
   const provider = new GoogleAuthProvider();
   const result = await signInWithPopup(getAuth(), provider);
   return result;
 };
 
-const onChnageAuthState = (
-  nextOrObserver: NextOrObserver<GoogleUser>,
-  error?: ErrorFn | undefined,
-  completed?: CompleteFn | undefined,
-) => {
-  onAuthStateChanged(getAuth(), nextOrObserver, error, completed);
-};
-
-export const singOutUser = async (): Promise<boolean> => {
+export const signOut = async (): Promise<boolean> => {
   try {
-    await signOut(getAuth());
+    await firebaseAuth.signOut(getAuth());
     return true;
   } catch {
     return false;
   }
 };
 
+const getCurrentUer = () => new Promise((resolve, reject) => {
+  const removeListener = onAuthStateChanged(
+    getAuth(),
+    (user) => {
+      removeListener();
+      resolve(user);
+    },
+    reject,
+  );
+});
+
+const onChnageAuthState = (
+  nextOrObserver: NextOrObserver<User>,
+  error?: ErrorFn | undefined,
+  completed?: CompleteFn | undefined,
+) => {
+  onAuthStateChanged(getAuth(), nextOrObserver, error, completed);
+};
+
 export default {
-  signInByGoogle,
+  signIn,
+  signOut,
   onChnageAuthState,
-  singOutUser,
+  getCurrentUer,
 };

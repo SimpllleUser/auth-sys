@@ -6,7 +6,7 @@ import { Nullable } from '@/types/base';
 
 import baseAuthService, { UserParams } from '@/services/base-auth';
 
-export const useGoogleAuthStore = defineStore('baseAuth', () => {
+export const useBaseAuthStore = defineStore('baseAuth', () => {
   const userCredential = ref<Nullable<UserCredential>>(null);
 
   const user = computed((): Nullable<User> => userCredential.value?.user || null);
@@ -33,12 +33,21 @@ export const useGoogleAuthStore = defineStore('baseAuth', () => {
       const isResetedAuthSession = await baseAuthService.singOut();
       if (!isResetedAuthSession) return;
       userCredential.value = null;
-    } catch (e) { console.log(e); }
+    } catch (e) {
+      console.log(e);
+    }
   };
 
   const getCurrentUser = baseAuthService.getCurrentUer;
+  const { onChnageAuthState } = baseAuthService;
 
   return {
-    signIn, signUp, singOut, getCurrentUser, user, isAuthed,
+    signIn,
+    signUp,
+    singOut,
+    getCurrentUser,
+    onChnageAuthState,
+    user,
+    isAuthed,
   };
 });
