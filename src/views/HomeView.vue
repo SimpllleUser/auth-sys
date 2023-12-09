@@ -1,51 +1,20 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
+    <img v-if="user" alt="Vue logo" :src="user.photoURL" />
     <button @click="signInByGoogle">Sign in by Google</button>
-    <button @click="singOutUser">Sign out</button>
-
+    <button @click="singOutUserByGoogle">Sign out</button>
     {{ user }}
   </div>
 </template>
 
 <script lang="ts" setup>
-import { ref } from 'vue';
-import axios from 'axios';
-import {
-  getAuth, GoogleAuthProvider, signInWithPopup, onAuthStateChanged, signOut,
-} from 'firebase/auth';
-import { firebase } from '../plugins/firebase';
+import { storeToRefs } from 'pinia';
 
-const user = ref<any>('');
+import { useGoogleAuthStore } from '../store/useGoogleAuth';
 
-// SIGN IN BY GOOGLE PROVIDER
-const signInByGoogle = async () => {
-  const provider = new GoogleAuthProvider();
-  const res = await signInWithPopup(getAuth(), provider);
+const googleAuthStore = useGoogleAuthStore();
 
-  // SAVE TO STORAGE
-  localStorage.setItem('user', JSON.stringify(res));
+const { user } = storeToRefs(googleAuthStore);
+const { singOutUserByGoogle, signInByGoogle } = googleAuthStore;
 
-  user.value = res;
-  console.log(res);
-};
-
-// CHECK STATUS USER (AUTH OR NOT)
-onAuthStateChanged(getAuth(), (actualUser) => {
-  if (actualUser) {
-    console.log('Користувач авторизований:', actualUser.uid);
-  } else {
-    console.log('Користувач не авторизований');
-  }
-});
-
-// LOGOUT USER
-const singOutUser = async () => {
-  await signOut(getAuth());
-
-  localStorage.setItem('user', JSON.stringify({}));
-
-  user.value = {};
-};
 </script>
-../services/firebase
