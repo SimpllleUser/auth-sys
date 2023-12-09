@@ -48,3 +48,4 @@ const singOutUser = async () => {
   user.value = {};
 };
 </script>
+../services/firebase
