@@ -21,7 +21,7 @@ export interface UserParams {
 
 export enum AuthActions {
   SignIn = 'SignIn',
-  SignUp = 'SignUp'
+  SignUp = 'SignUp',
 }
 
 const actionsAuth: Record<AuthActions, any> = {
@@ -29,11 +29,7 @@ const actionsAuth: Record<AuthActions, any> = {
   [AuthActions.SignUp]: createUserWithEmailAndPassword,
 };
 
-const getBaseAction = (
-  actionType: AuthActions,
-) => (
-  params: UserParams,
-): Promise<Nullable<UserCredential>> | null => {
+const getBaseAction = (actionType: AuthActions) => (params: UserParams): Promise<Nullable<UserCredential>> | null => {
   try {
     const result = actionsAuth[actionType](params) as Promise<UserCredential>;
     return result;
