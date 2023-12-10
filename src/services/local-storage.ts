@@ -30,4 +30,6 @@ class SecureLocalStorageAdapter {
   }
 }
 
-export const storage = process.env.NODE_ENV ? localStorage : new SecureLocalStorageAdapter(sLocalStorage);
+export const secureStorage = new SecureLocalStorageAdapter(sLocalStorage);
+
+export const storage = process.env.NODE_ENV ? localStorage : secureStorage;
