@@ -1,4 +1,4 @@
-import fireBaseAuth, {
+import {
   getAuth,
   onAuthStateChanged,
   CompleteFn,
@@ -6,6 +6,7 @@ import fireBaseAuth, {
   NextOrObserver,
   User,
   UserCredential,
+  signOut as signOutGoogle,
 } from 'firebase/auth';
 import { Ref } from 'vue';
 import { Nullable } from '@/types/base';
@@ -15,7 +16,7 @@ export type BaseUser = User;
 
 export const signOut = (successCallBack?: () => void, errorCallBack?: (e: unknown) => void) => async (): Promise<void> => {
   try {
-    await fireBaseAuth.signOut(getAuth());
+    await signOutGoogle(getAuth());
     if (successCallBack) successCallBack();
   } catch (error) {
     if (errorCallBack) errorCallBack(error);
