@@ -1,52 +1,24 @@
-import {
+import fireBaseAuth, {
   getAuth,
-  GoogleAuthProvider,
-  signInWithPopup,
   onAuthStateChanged,
-  signOut,
-  UserCredential,
   CompleteFn,
   ErrorFn,
   NextOrObserver,
   User,
-  createUserWithEmailAndPassword,
-  signInWithEmailAndPassword,
+  UserCredential,
 } from 'firebase/auth';
+import { Ref } from 'vue';
 import { Nullable } from '@/types/base';
 
-export interface UserParams {
-  email: string;
-  password: string;
-}
+export type BaseUserCredential = UserCredential;
+export type BaseUser = User;
 
-export enum AuthActions {
-  SignIn = 'SignIn',
-  SignUp = 'SignUp',
-}
-
-const actionsAuth: Record<AuthActions, any> = {
-  [AuthActions.SignIn]: signInWithEmailAndPassword,
-  [AuthActions.SignUp]: createUserWithEmailAndPassword,
-};
-
-const getBaseAction = (actionType: AuthActions) => (params: UserParams): Promise<Nullable<UserCredential>> | null => {
+export const signOut = (successCallBack?: () => void, errorCallBack?: (e: unknown) => void) => async (): Promise<void> => {
   try {
-    const result = actionsAuth[actionType](params) as Promise<UserCredential>;
-    return result;
-  } catch (error: any) {
-    return null;
-  }
-};
-
-const signIn = getBaseAction(actionsAuth.SignIn);
-const signUp = getBaseAction(actionsAuth.SignUp);
-
-export const singOut = async (): Promise<boolean> => {
-  try {
-    await signOut(getAuth());
-    return true;
-  } catch {
-    return false;
+    await fireBaseAuth.signOut(getAuth());
+    if (successCallBack) successCallBack();
+  } catch (error) {
+    if (errorCallBack) errorCallBack(error);
   }
 };
 
@@ -69,10 +41,19 @@ const onChnageAuthState = (
   onAuthStateChanged(getAuth(), nextOrObserver, error, completed);
 };
 
+const getters = {
+  currentUser: (
+    userCredential: Ref<Nullable<BaseUserCredential>>,
+  ) => (): Nullable<BaseUser> => userCredential.value?.user || null,
+  isAuthed: (
+    userCredential: Ref<Nullable<BaseUserCredential>>,
+  ) => () => userCredential.value?.user?.uid,
+};
+
 export default {
-  signIn,
-  signUp,
-  singOut,
+  signOut,
   getCurrentUer,
   onChnageAuthState,
+  getAuth,
+  getters,
 };

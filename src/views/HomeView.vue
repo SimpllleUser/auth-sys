@@ -1,9 +1,9 @@
 <template>
   <div class="home">
-    <img v-if="user" alt="Vue logo" :src="user.photoURL" />
-    <button @click="signInByGoogle">Sign in by Google</button>
-    <button @click="singOutUserByGoogle">Sign out</button>
-    {{ user }}
+    <img v-if="currentUser" alt="Vue logo" :src="currentUser.photoURL" />
+    <button @click="signIn">Sign in by Google</button>
+    <button @click="signOut">Sign out</button>
+    {{ currentUser }}
   </div>
 </template>
 
@@ -14,7 +14,6 @@ import { useGoogleAuthStore } from '../store/useGoogleAuth';
 
 const googleAuthStore = useGoogleAuthStore();
 
-const { user } = storeToRefs(googleAuthStore);
-const { singOutUserByGoogle, signInByGoogle } = googleAuthStore;
-
+const { currentUser } = storeToRefs(googleAuthStore);
+const { signOut, signIn } = googleAuthStore;
 </script>
