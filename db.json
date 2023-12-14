@@ -1,0 +1,36 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typ,icode"
+  },
+  "users": [
+    {
+      "email": "olivier@mail.com",
+      "password": "$2a$10$sAE3WBaehjI1tiBFUTQwgeTUUiBzTt6db3CTPONmSb6g263Q4wNPm",
+      "id": 1
+    },
+    {
+      "email": "olivi1er@mail.com",
+      "password": "$2a$10$9FRqDcn9zoI210I0V4rWO.9B.ocnVClBySqU17xW/PlPpmvHfeQHe",
+      "id": 2
+    },
+    {
+      "email": "test111@gmail.com",
+      "password": "$2a$10$sjXCVO.r.eJoomuOMQcAx.w8tMuwOSHCOmWC1fEHBZnI7Qj8XIsQe",
+      "id": 3
+    }
+  ]
+}

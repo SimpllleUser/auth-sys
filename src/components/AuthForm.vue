@@ -2,12 +2,19 @@
 import { computed, ComputedRef, ref } from 'vue';
 import { storeToRefs } from 'pinia';
 import { UserParams } from '@/services/emailPassword-auth';
-import { useEmailPasswordStore } from '../store/useEmailPasswordAuth';
+// import { useEmailPasswordStore } from '../store/useEmailPasswordAuth';
 
-const emailPasswordStore = useEmailPasswordStore();
+// const emailPasswordStore = useEmailPasswordStore();
 
-const { signIn, signUp, signOut } = emailPasswordStore;
-const { currentUser, isAuthed } = storeToRefs(emailPasswordStore);
+// const { signIn, signUp, signOut } = emailPasswordStore;
+// const { currentUser, isAuthed } = storeToRefs(emailPasswordStore);
+
+import { useCustomAuthStore } from '../store/useCustomAuth';
+
+const customAuthStore = useCustomAuthStore();
+
+const { signIn, signUp, signOut } = customAuthStore;
+const { currentUser, isAuthed } = storeToRefs(customAuthStore);
 
 const isSignIn = ref(true);
 

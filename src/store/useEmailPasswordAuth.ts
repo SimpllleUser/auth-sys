@@ -10,14 +10,14 @@ import { storage } from '@/services/local-storage';
 
 const { getters } = baseAuthService;
 
-const getInitedUseEmailPasswordStore = () => (storage.getItem('user') ? JSON.parse(storage.getItem('user')) : {});
+const getInitedUserEmailPasswordStore = () => (storage.getItem('user') ? JSON.parse(storage.getItem('user')) : {});
 
 const saveObjectToStorage = (key: string, value: any) => {
   storage.setItem(key, JSON.stringify(value));
 };
 
 export const useEmailPasswordStore = defineStore('email-password', () => {
-  const userCredential = ref<Nullable<BaseUserCredential>>(getInitedUseEmailPasswordStore());
+  const userCredential = ref<Nullable<BaseUserCredential>>(getInitedUserEmailPasswordStore());
 
   const currentUser = computed(getters.currentUser(userCredential));
   const isAuthed = computed(getters.isAuthed(userCredential));
