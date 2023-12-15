@@ -3,8 +3,7 @@ import { defineStore } from 'pinia';
 
 import { Nullable } from '@/types/base';
 
-import customAuthService from '@/services/custom-provider-auht';
-import { BaseUserCredential } from '@/services/base-auth';
+import customAuthService, { UserCredential } from '@/services/custom-provider-auht';
 import { storage } from '@/services/local-storage';
 import { UserParams } from '@/services/emailPassword-auth';
 import router from '@/router';
@@ -16,7 +15,7 @@ const saveObjectToStorage = (key: string, value: any) => {
 };
 
 export const useCustomAuthStore = defineStore('custom-auth', () => {
-  const userCredential = ref<Nullable<BaseUserCredential>>(getInitedUser());
+  const userCredential = ref<Nullable<UserCredential>>(getInitedUser());
 
   const currentUser = computed(() => userCredential.value);
   const isAuthed = computed(() => Boolean(userCredential.value));
@@ -38,6 +37,7 @@ export const useCustomAuthStore = defineStore('custom-auth', () => {
     () => userCredential.value,
     (user) => {
       saveObjectToStorage('user', user);
+      customAuthService.setAuthToken(user?.accessToken);
     },
   );
 

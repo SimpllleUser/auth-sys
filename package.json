@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "vue-cli-service serve",
+    "server": "json-server db.json -m ./node_modules/json-server-auth",
     "build": "vue-cli-service build",
     "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint"

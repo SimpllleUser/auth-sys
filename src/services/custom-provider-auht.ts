@@ -1,23 +1,33 @@
 import api from './api';
 import { UserParams } from './emailPassword-auth';
+import { storage } from './local-storage';
 
-const signIn = async (params: UserParams) => {
-  /// TODO add set property token by api
+export interface User {
+  id: string;
+  email: string;
+}
+
+export interface UserCredential {
+  accessToken: string;
+  user: User
+}
+
+const signIn = async (params: UserParams): Promise<UserCredential> => {
   const result = await api.post('/login', params);
   return result.data;
 };
 
-const signUp = async (params: UserParams) => {
-  /// TODO add set property token by api
+const signUp = async (params: UserParams): Promise<UserCredential> => {
   const result = await api.post('/register', params);
   return result.data;
 };
 
-const signOut = () => {
-  /// TODO add reset property token by api
+const setAuthToken = (token = '') => {
+  storage.setItem('token', token);
 };
 
 export default {
   signIn,
   signUp,
+  setAuthToken,
 };
