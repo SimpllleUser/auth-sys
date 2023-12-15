@@ -10,6 +10,7 @@ import {
 } from 'firebase/auth';
 import { Ref } from 'vue';
 import { Nullable } from '@/types/base';
+import { storage } from './local-storage';
 
 export type BaseUserCredential = UserCredential;
 export type BaseUser = User;
@@ -51,10 +52,20 @@ const getters = {
   ) => () => userCredential.value?.user?.uid,
 };
 
+const saveUser = <T = unknown>(user: T) => {
+  storage.setItem('user', JSON.stringify(user));
+};
+
+const getSavedUser = <T = string>():T => (storage.getItem('user')
+  ? JSON.parse(storage.getItem('user'))
+  : {});
+
 export default {
   signOut,
   getCurrentUer,
   onChnageAuthState,
   getAuth,
+  saveUser,
+  getSavedUser,
   getters,
 };

@@ -1,4 +1,5 @@
 import api from './api';
+import baseAuthService from './base-auth';
 import { UserParams } from './emailPassword-auth';
 import { storage } from './local-storage';
 
@@ -26,8 +27,12 @@ const setAuthToken = (token = '') => {
   storage.setItem('token', token);
 };
 
+const { saveUser, getSavedUser } = baseAuthService;
+
 export default {
   signIn,
   signUp,
   setAuthToken,
+  saveUser,
+  getSavedUser,
 };
