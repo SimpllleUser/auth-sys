@@ -1,15 +1,15 @@
-import { computed, ref } from 'vue';
+import { computed, ref, watch } from 'vue';
 import { defineStore } from 'pinia';
 
-import baseAuthService from '../services/base-auth';
-import googleAuthService from '@/services/google-auth';
 import { Nullable } from '@/types/base';
+
+import googleAuthService from '@/services/google-auth';
 import { BaseUserCredential } from '@/services/base-auth';
 
-const { getters } = baseAuthService;
+const { getters } = googleAuthService;
 
 export const useGoogleAuthStore = defineStore('googleAuth', () => {
-  const userCredential = ref<Nullable<BaseUserCredential>>(null);
+  const userCredential = ref<Nullable<BaseUserCredential>>(googleAuthService.getSavedUser());
 
   const currentUser = computed(getters.currentUser(userCredential));
   const isAuthed = computed(getters.isAuthed(userCredential));
@@ -21,6 +21,13 @@ export const useGoogleAuthStore = defineStore('googleAuth', () => {
   const signOut = googleAuthService.signOut(() => {
     userCredential.value = null;
   }, console.log);
+
+  watch(
+    () => userCredential.value,
+    (user) => {
+      googleAuthService.saveUser<BaseUserCredential | string>(user || '');
+    },
+  );
 
   return {
     signIn,

@@ -3,21 +3,13 @@ import { defineStore } from 'pinia';
 
 import { Nullable } from '@/types/base';
 
-import baseAuthService from '../services/base-auth';
 import emailPasswordAuthService, { UserParams } from '@/services/emailPassword-auth';
 import { BaseUserCredential } from '@/services/base-auth';
-import { storage } from '@/services/local-storage';
 
-const { getters } = baseAuthService;
-
-const getInitedUserEmailPasswordStore = () => (storage.getItem('user') ? JSON.parse(storage.getItem('user')) : {});
-
-const saveObjectToStorage = (key: string, value: any) => {
-  storage.setItem(key, JSON.stringify(value));
-};
+const { getters } = emailPasswordAuthService;
 
 export const useEmailPasswordStore = defineStore('email-password', () => {
-  const userCredential = ref<Nullable<BaseUserCredential>>(getInitedUserEmailPasswordStore());
+  const userCredential = ref<Nullable<BaseUserCredential>>(emailPasswordAuthService.getSavedUser());
 
   const currentUser = computed(getters.currentUser(userCredential));
   const isAuthed = computed(getters.isAuthed(userCredential));
@@ -37,7 +29,7 @@ export const useEmailPasswordStore = defineStore('email-password', () => {
   watch(
     () => userCredential.value,
     (user) => {
-      saveObjectToStorage('user', user);
+      emailPasswordAuthService.saveUser<BaseUserCredential | string>(user || '');
     },
   );
 
