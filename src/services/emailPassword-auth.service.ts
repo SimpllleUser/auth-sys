@@ -1,7 +1,7 @@
 import { Auth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth';
 import { Nullable } from '@/types/base';
 
-import baseAuthService, { BaseUserCredential } from './base-auth';
+import baseAuthService, { BaseUserCredential } from './base-auth.service';
 
 export interface UserParams {
   email: string;

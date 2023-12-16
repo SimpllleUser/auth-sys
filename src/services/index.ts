@@ -1,2 +1,2 @@
-import './firebase';
-import './api';
+import './firebase.service';
+import './api.services';

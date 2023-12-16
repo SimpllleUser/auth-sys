@@ -1,5 +1,5 @@
 import { NavigationGuardNext, RouteLocationNormalized, RouteRecordRaw } from 'vue-router';
-import { BaseUser } from './base-auth';
+import { BaseUser } from './base-auth.service';
 
 export type GuardedPath = RouteRecordRaw & { meta: { requiresAuth: boolean } };
 export type BaseRoute = GuardedPath | RouteRecordRaw

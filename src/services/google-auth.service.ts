@@ -3,7 +3,7 @@ import {
   signInWithPopup,
 } from 'firebase/auth';
 
-import baseAuthService, { BaseUserCredential } from './base-auth';
+import baseAuthService, { BaseUserCredential } from './base-auth.service';
 
 const signIn = async (): Promise<BaseUserCredential> => {
   const provider = new GoogleAuthProvider();

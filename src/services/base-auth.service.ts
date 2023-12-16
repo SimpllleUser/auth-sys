@@ -10,7 +10,7 @@ import {
 } from 'firebase/auth';
 import { Ref } from 'vue';
 import { Nullable } from '@/types/base';
-import { storage } from './local-storage';
+import { storage } from './local-storage.service';
 
 export type BaseUserCredential = UserCredential;
 export type BaseUser = User;

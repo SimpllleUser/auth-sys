@@ -3,8 +3,8 @@ import { defineStore } from 'pinia';
 
 import { Nullable } from '@/types/base';
 
-import customAuthService, { UserCredential } from '@/services/custom-provider-auht';
-import { UserParams } from '@/services/emailPassword-auth';
+import customAuthService, { UserCredential } from '@/services/custom-provider-auth.service';
+import { UserParams } from '@/services/emailPassword-auth.service';
 import router from '@/router';
 
 export const useCustomAuthStore = defineStore('custom-auth', () => {

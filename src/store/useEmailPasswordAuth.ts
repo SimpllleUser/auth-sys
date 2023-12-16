@@ -3,8 +3,8 @@ import { defineStore } from 'pinia';
 
 import { Nullable } from '@/types/base';
 
-import emailPasswordAuthService, { UserParams } from '@/services/emailPassword-auth';
-import { BaseUserCredential } from '@/services/base-auth';
+import emailPasswordAuthService, { UserParams } from '@/services/emailPassword-auth.service';
+import { BaseUserCredential } from '@/services/base-auth.service';
 
 const { getters } = emailPasswordAuthService;
 

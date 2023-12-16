@@ -1,7 +1,7 @@
-import api from './api';
-import baseAuthService from './base-auth';
-import { UserParams } from './emailPassword-auth';
-import { storage } from './local-storage';
+import api from './api.services';
+import baseAuthService from './base-auth.service';
+import { UserParams } from './emailPassword-auth.service';
+import { storage } from './local-storage.service';
 
 export interface User {
   id: string;
