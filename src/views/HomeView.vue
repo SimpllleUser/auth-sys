@@ -10,10 +10,11 @@
 <script lang="ts" setup>
 import { storeToRefs } from 'pinia';
 
-import { useGoogleAuthStore } from '../store/useGoogleAuth';
+import { useGoogleAuthStore } from '../store/google-auth';
 
 const googleAuthStore = useGoogleAuthStore();
 
 const { currentUser } = storeToRefs(googleAuthStore);
 const { signOut, signIn } = googleAuthStore;
 </script>
+../store/google-auth

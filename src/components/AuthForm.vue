@@ -9,7 +9,7 @@ import { UserParams } from '@/services/emailPassword-auth';
 // const { signIn, signUp, signOut } = emailPasswordStore;
 // const { currentUser, isAuthed } = storeToRefs(emailPasswordStore);
 
-import { useCustomAuthStore } from '../store/useCustomAuth';
+import { useCustomAuthStore } from '../store/custom-auth';
 
 const customAuthStore = useCustomAuthStore();
 
@@ -51,3 +51,4 @@ const onSubmit = async () => {
 
 <style scoped></style>
 @/services/emailPassword-auth.service
+../store/custom-auth
