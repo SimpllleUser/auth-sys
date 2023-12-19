@@ -6,11 +6,12 @@
     "dev": "vue-cli-service serve",
     "server": "json-server db.json -m ./node_modules/json-server-auth",
     "build": "vue-cli-service build",
-    "test:unit": "vue-cli-service test:unit",
+    "test:unit": "vue-cli-service test:unit --watch",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
     "axios": "^1.6.2",
+    "axios-mock-adapter": "^1.22.0",
     "core-js": "^3.8.3",
     "firebase": "^10.7.1",
     "pinia": "^2.1.7",

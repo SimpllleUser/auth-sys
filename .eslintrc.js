@@ -54,6 +54,11 @@ module.exports = {
     process: 'readonly',
     Capacitor: 'readonly',
     chrome: 'readonly',
+    describe: true,
+    beforeEach: true,
+    afterEach: true,
+    it: true,
+    expect: true,
   },
 
   // add your custom rules here
