@@ -1,0 +1,245 @@
+[debug] [2023-12-20T22:11:12.083Z] ----------------------------------------------------------------------
+[debug] [2023-12-20T22:11:12.086Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\krazis\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js emulators:start
+[debug] [2023-12-20T22:11:12.087Z] CLI Version:   12.5.2
+[debug] [2023-12-20T22:11:12.087Z] Platform:      win32
+[debug] [2023-12-20T22:11:12.088Z] Node Version:  v18.17.1
+[debug] [2023-12-20T22:11:12.089Z] Time:          Thu Dec 21 2023 00:11:12 GMT+0200 (Восточная Европа, стандартное время)
+[debug] [2023-12-20T22:11:12.089Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-12-20T22:11:12.242Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-12-20T22:11:12.243Z] > authorizing via signed-in user (pecheritsa.vv@gmail.com)
+[debug] [2023-12-20T22:11:12.414Z] java version "11.0.16.1" 2022-08-18 LTS
+
+[debug] [2023-12-20T22:11:12.415Z] Java(TM) SE Runtime Environment 18.9 (build 11.0.16.1+1-LTS-1)
+Java HotSpot(TM) 64-Bit Server VM 18.9 (build 11.0.16.1+1-LTS-1, mixed mode)
+
+[debug] [2023-12-20T22:11:12.492Z] Parsed Java major version: 11
+[info] i  emulators: Starting emulators: auth, functions, firestore, database, hosting, pubsub, storage, eventarc {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: auth, functions, firestore, database, hosting, pubsub, storage, eventarc"}}
+[warn] !  hosting: The hosting emulator is configured but there is no hosting configuration. Have you run firebase init hosting? {"metadata":{"emulator":{"name":"hosting"},"message":"The hosting emulator is configured but there is no hosting configuration. Have you run \u001b[1mfirebase init hosting\u001b[22m?"}}
+[debug] [2023-12-20T22:11:12.531Z] [logging] Logging Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2023-12-20T22:11:12.532Z] [auth] Authentication Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2023-12-20T22:11:12.532Z] [firestore] Firestore Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2023-12-20T22:11:12.532Z] [firestore.websocket] websocket server for firestore only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2023-12-20T22:11:12.532Z] [database] Database Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2023-12-20T22:11:12.532Z] [pubsub] Pub/Sub Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2023-12-20T22:11:12.532Z] [storage] Storage Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2023-12-20T22:11:12.533Z] assigned listening specs for emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":9098},{"address":"::1","family":"IPv6","port":9098}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"auth":[{"address":"127.0.0.1","family":"IPv4","port":9090}],"firestore":[{"address":"127.0.0.1","family":"IPv4","port":9092}],"firestore.websocket":[{"address":"127.0.0.1","family":"IPv4","port":9150}],"database":[{"address":"127.0.0.1","family":"IPv4","port":9093}],"pubsub":[{"address":"127.0.0.1","family":"IPv4","port":9095}],"storage":[{"address":"127.0.0.1","family":"IPv4","port":9096}]},"metadata":{"message":"assigned listening specs for emulators"}}
+[debug] [2023-12-20T22:11:12.551Z] [hub] writing locator at C:\Users\krazis\AppData\Local\Temp\hub-note-d3618.json
+[warn] !  functions: The functions emulator is configured but there is no functions source directory. Have you run firebase init functions? {"metadata":{"emulator":{"name":"functions"},"message":"The functions emulator is configured but there is no functions source directory. Have you run \u001b[1mfirebase init functions\u001b[22m?"}}
+[warn] !  firestore: Cloud Firestore Emulator does not support multiple databases yet. {"metadata":{"emulator":{"name":"firestore"},"message":"Cloud Firestore Emulator does not support multiple databases yet."}}
+[warn] !  firestore: Did not find a Cloud Firestore rules file specified in a firebase.json config file. {"metadata":{"emulator":{"name":"firestore"},"message":"Did not find a Cloud Firestore rules file specified in a firebase.json config file."}}
+[warn] !  firestore: The emulator will default to allowing all reads and writes. Learn more about this option: https://firebase.google.com/docs/emulator-suite/install_and_configure#security_rules_configuration. {"metadata":{"emulator":{"name":"firestore"},"message":"The emulator will default to allowing all reads and writes. Learn more about this option: https://firebase.google.com/docs/emulator-suite/install_and_configure#security_rules_configuration."}}
+[debug] [2023-12-20T22:11:12.565Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"firestore"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2023-12-20T22:11:12.566Z] Ignoring unsupported arg: single_project_mode_error {"metadata":{"emulator":{"name":"firestore"},"message":"Ignoring unsupported arg: single_project_mode_error"}}
+[debug] [2023-12-20T22:11:12.566Z] Starting Firestore Emulator with command {"binary":"java","args":["-Dgoogle.cloud_firestore.debug_log_level=FINE","-Duser.language=en","-jar","C:\\Users\\krazis\\.cache\\firebase\\emulators\\cloud-firestore-emulator-v1.18.1.jar","--host","127.0.0.1","--port",9092,"--websocket_port",9150,"--project_id","note-d3618","--single_project_mode",true],"optionalArgs":["port","webchannel_port","host","rules","websocket_port","functions_emulator","seed_from_export","project_id","single_project_mode"],"joinArgs":false} {"metadata":{"emulator":{"name":"firestore"},"message":"Starting Firestore Emulator with command {\"binary\":\"java\",\"args\":[\"-Dgoogle.cloud_firestore.debug_log_level=FINE\",\"-Duser.language=en\",\"-jar\",\"C:\\\\Users\\\\krazis\\\\.cache\\\\firebase\\\\emulators\\\\cloud-firestore-emulator-v1.18.1.jar\",\"--host\",\"127.0.0.1\",\"--port\",9092,\"--websocket_port\",9150,\"--project_id\",\"note-d3618\",\"--single_project_mode\",true],\"optionalArgs\":[\"port\",\"webchannel_port\",\"host\",\"rules\",\"websocket_port\",\"functions_emulator\",\"seed_from_export\",\"project_id\",\"single_project_mode\"],\"joinArgs\":false}"}}
+[info] i  firestore: Firestore Emulator logging to firestore-debug.log {"metadata":{"emulator":{"name":"firestore"},"message":"Firestore Emulator logging to \u001b[1mfirestore-debug.log\u001b[22m"}}
+[info] +  firestore: Firestore Emulator UI websocket is running on 9150. {"metadata":{"emulator":{"name":"firestore"},"message":"Firestore Emulator UI websocket is running on 9150."}}
+[debug] [2023-12-20T22:11:14.932Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/note-d3618 [none]
+[debug] [2023-12-20T22:11:15.358Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/note-d3618 200
+[debug] [2023-12-20T22:11:15.360Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/note-d3618 {"projectId":"note-d3618","projectNumber":"26255156252","displayName":"auth-sys","name":"projects/note-d3618","resources":{"hostingSite":"note-d3618","realtimeDatabaseInstance":"note-d3618-default-rtdb"},"state":"ACTIVE","etag":"1_b5f9381b-cba6-446a-b577-e0165ea14c38"}
+[debug] [2023-12-20T22:11:15.361Z] database rules config:  []
+[warn] !  database: Did not find a Realtime Database rules file specified in a firebase.json config file. The emulator will default to allowing all reads and writes. Learn more about this option: https://firebase.google.com/docs/emulator-suite/install_and_configure#security_rules_configuration. {"metadata":{"emulator":{"name":"database"},"message":"Did not find a Realtime Database rules file specified in a firebase.json config file. The emulator will default to allowing all reads and writes. Learn more about this option: https://firebase.google.com/docs/emulator-suite/install_and_configure#security_rules_configuration."}}
+[debug] [2023-12-20T22:11:15.370Z] Ignoring unsupported arg: projectId {"metadata":{"emulator":{"name":"database"},"message":"Ignoring unsupported arg: projectId"}}
+[debug] [2023-12-20T22:11:15.370Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"database"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2023-12-20T22:11:15.371Z] Ignoring unsupported arg: rules {"metadata":{"emulator":{"name":"database"},"message":"Ignoring unsupported arg: rules"}}
+[debug] [2023-12-20T22:11:15.371Z] Starting Database Emulator with command {"binary":"java","args":["-Duser.language=en","-jar","C:\\Users\\krazis\\.cache\\firebase\\emulators\\firebase-database-emulator-v4.11.2.jar","--host","127.0.0.1","--port",9093,"--single_project_mode","Warning"],"optionalArgs":["port","host","functions_emulator_port","functions_emulator_host","single_project_mode"],"joinArgs":false} {"metadata":{"emulator":{"name":"database"},"message":"Starting Database Emulator with command {\"binary\":\"java\",\"args\":[\"-Duser.language=en\",\"-jar\",\"C:\\\\Users\\\\krazis\\\\.cache\\\\firebase\\\\emulators\\\\firebase-database-emulator-v4.11.2.jar\",\"--host\",\"127.0.0.1\",\"--port\",9093,\"--single_project_mode\",\"Warning\"],\"optionalArgs\":[\"port\",\"host\",\"functions_emulator_port\",\"functions_emulator_host\",\"single_project_mode\"],\"joinArgs\":false}"}}
+[info] i  database: Database Emulator logging to database-debug.log {"metadata":{"emulator":{"name":"database"},"message":"Database Emulator logging to \u001b[1mdatabase-debug.log\u001b[22m"}}
+[debug] [2023-12-20T22:11:26.180Z] Ignoring unsupported arg: projectId {"metadata":{"emulator":{"name":"pubsub"},"message":"Ignoring unsupported arg: projectId"}}
+[debug] [2023-12-20T22:11:26.180Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"pubsub"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2023-12-20T22:11:26.180Z] Starting Pub/Sub Emulator with command {"binary":"C:\\Users\\krazis\\.cache\\firebase\\emulators\\pubsub-emulator-0.7.1\\pubsub-emulator\\bin\\cloud-pubsub-emulator.bat","args":["--host=127.0.0.1","--port=9095"],"optionalArgs":["port","host"],"joinArgs":true} {"metadata":{"emulator":{"name":"pubsub"},"message":"Starting Pub/Sub Emulator with command {\"binary\":\"C:\\\\Users\\\\krazis\\\\.cache\\\\firebase\\\\emulators\\\\pubsub-emulator-0.7.1\\\\pubsub-emulator\\\\bin\\\\cloud-pubsub-emulator.bat\",\"args\":[\"--host=127.0.0.1\",\"--port=9095\"],\"optionalArgs\":[\"port\",\"host\"],\"joinArgs\":true}"}}
+[info] i  pubsub: Pub/Sub Emulator logging to pubsub-debug.log {"metadata":{"emulator":{"name":"pubsub"},"message":"Pub/Sub Emulator logging to \u001b[1mpubsub-debug.log\u001b[22m"}}
+[debug] [2023-12-20T22:11:28.776Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"storage"},"message":"Ignoring unsupported arg: port"}}
+[debug] [2023-12-20T22:11:30.247Z] Temp file directory for storage emulator: C:\Users\krazis\AppData\Local\Temp/firebase/storage/blobs {"metadata":{"emulator":{"name":"storage"},"message":"Temp file directory for storage emulator: C:\\Users\\krazis\\AppData\\Local\\Temp/firebase/storage/blobs"}}
+[info] i  ui: downloading ui-v1.11.7.zip... {"metadata":{"emulator":{"name":"ui"},"message":"downloading ui-v1.11.7.zip..."}}
+[debug] [2023-12-20T22:11:30.264Z] >>> [apiv2][query] GET https://storage.googleapis.com/firebase-preview-drop/emulator/ui-v1.11.7.zip 
+[debug] [2023-12-20T22:11:30.483Z] <<< [apiv2][status] GET https://storage.googleapis.com/firebase-preview-drop/emulator/ui-v1.11.7.zip 200
+[debug] [2023-12-20T22:11:30.484Z] <<< [apiv2][body] GET https://storage.googleapis.com/firebase-preview-drop/emulator/ui-v1.11.7.zip [stream]
+[debug] [2023-12-20T22:11:31.707Z] Data is 3064105
+[debug] [2023-12-20T22:11:31.707Z] [unzip] Entry: client/ (compressed_size=0 bytes, uncompressed_size=0 bytes)
+[debug] [2023-12-20T22:11:31.707Z] [unzip] Processing entry: client\
+[debug] [2023-12-20T22:11:31.708Z] [unzip] mkdir: C:\Users\krazis\.cache\firebase\emulators\ui-v1.11.7\client\
+[debug] [2023-12-20T22:11:31.708Z] [unzip] Entry: client/favicon.ico (compressed_size=2497 bytes, uncompressed_size=7406 bytes)
+[debug] [2023-12-20T22:11:31.709Z] [unzip] Processing entry: client\favicon.ico
+[debug] [2023-12-20T22:11:31.709Z] [unzip] else mkdir: C:\Users\krazis\.cache\firebase\emulators\ui-v1.11.7\client
+[debug] [2023-12-20T22:11:31.710Z] [unzip] deflating: C:\Users\krazis\.cache\firebase\emulators\ui-v1.11.7\client\favicon.ico
+[debug] [2023-12-20T22:11:31.715Z] [unzip] Entry: client/apple-touch-icon.png (compressed_size=7231 bytes, uncompressed_size=7367 bytes)
+[debug] [2023-12-20T22:11:31.715Z] [unzip] Processing entry: client\apple-touch-icon.png
+[debug] [2023-12-20T22:11:31.715Z] [unzip] else mkdir: C:\Users\krazis\.cache\firebase\emulators\ui-v1.11.7\client
+[debug] [2023-12-20T22:11:31.716Z] [unzip] deflating: C:\Users\krazis\.cache\firebase\emulators\ui-v1.11.7\client\apple-touch-icon.png
+[debug] [2023-12-20T22:11:31.717Z] [unzip] Entry: client/android-chrome-512x512.png (compressed_size=16987 bytes, uncompressed_size=18186 bytes)
+[debug] [2023-12-20T22:11:31.717Z] [unzip] Processing entry: client\android-chrome-512x512.png
+[debug] [2023-12-20T22:11:31.717Z] [unzip] else mkdir: C:\Users\krazis\.cache\firebase\emulators\ui-v1.11.7\client
+[debug] [2023-12-20T22:11:31.718Z] [unzip] deflating: C:\Users\krazis\.cache\firebase\emulators\ui-v1.11.7\client\android-chrome-512x512.png
+[debug] [2023-12-20T22:11:31.720Z] [unzip] Entry: client/assets/ (compressed_size=0 bytes, uncompressed_size=0 bytes)
+[debug] [2023-12-20T22:11:31.720Z] [unzip] Processing entry: client\assets\
+[debug] [2023-12-20T22:11:31.720Z] [unzip] mkdir: C:\Users\krazis\.cache\firebase\emulators\ui-v1.11.7\client\assets\
+[debug] [2023-12-20T22:11:31.721Z] [unzip] Entry: client/assets/extensions/ (compressed_size=0 bytes, uncompressed_size=0 bytes)
+[debug] [2023-12-20T22:11:31.721Z] [unzip] Processing entry: client\assets\extensions\
+[debug] [2023-12-20T22:11:31.721Z] [unzip] mkdir: C:\Users\krazis\.cache\firebase\emulators\ui-v1.11.7\client\assets\extensions\
+[debug] [2023-12-20T22:11:31.722Z] [unzip] Entry: client/assets/extensions/default-extension.png (compressed_size=1646 bytes, uncompressed_size=1657 bytes)
+[debug] [2023-12-20T22:11:31.722Z] [unzip] Processing entry: client\assets\extensions\default-extension.png
+[debug] [2023-12-20T22:11:31.722Z] [unzip] else mkdir: C:\Users\krazis\.cache\firebase\emulators\ui-v1.11.7\client\assets\extensions
+[debug] [2023-12-20T22:11:31.722Z] [unzip] deflating: C:\Users\krazis\.cache\firebase\emulators\ui-v1.11.7\client\assets\extensions\default-extension.png
+[debug] [2023-12-20T22:11:31.724Z] [unzip] Entry: client/assets/index.58ca09f7.css (compressed_size=37601 bytes, uncompressed_size=321252 bytes)
+[debug] [2023-12-20T22:11:31.724Z] [unzip] Processing entry: client\assets\index.58ca09f7.css
+[debug] [2023-12-20T22:11:31.724Z] [unzip] else mkdir: C:\Users\krazis\.cache\firebase\emulators\ui-v1.11.7\client\assets
+[debug] [2023-12-20T22:11:31.725Z] [unzip] deflating: C:\Users\krazis\.cache\firebase\emulators\ui-v1.11.7\client\assets\index.58ca09f7.css
+[debug] [2023-12-20T22:11:31.729Z] [unzip] Entry: client/assets/index.c2583d42.js (compressed_size=526232 bytes, uncompressed_size=1860152 bytes)
+[debug] [2023-12-20T22:11:31.729Z] [unzip] Processing entry: client\assets\index.c2583d42.js
+[debug] [2023-12-20T22:11:31.729Z] [unzip] else mkdir: C:\Users\krazis\.cache\firebase\emulators\ui-v1.11.7\client\assets
+[debug] [2023-12-20T22:11:31.730Z] [unzip] deflating: C:\Users\krazis\.cache\firebase\emulators\ui-v1.11.7\client\assets\index.c2583d42.js
+[debug] [2023-12-20T22:11:31.745Z] [unzip] Entry: client/assets/provider-icons/ (compressed_size=0 bytes, uncompressed_size=0 bytes)
+[debug] [2023-12-20T22:11:31.745Z] [unzip] Processing entry: client\assets\provider-icons\
+[debug] [2023-12-20T22:11:31.745Z] [unzip] mkdir: C:\Users\krazis\.cache\firebase\emulators\ui-v1.11.7\client\assets\provider-icons\
+[debug] [2023-12-20T22:11:31.746Z] [unzip] Entry: client/assets/provider-icons/auth_service_oidc.svg (compressed_size=414 bytes, uncompressed_size=858 bytes)
+[debug] [2023-12-20T22:11:31.746Z] [unzip] Processing entry: client\assets\provider-icons\auth_service_oidc.svg
+[debug] [2023-12-20T22:11:31.746Z] [unzip] else mkdir: C:\Users\krazis\.cache\firebase\emulators\ui-v1.11.7\client\assets\provider-icons
+[debug] [2023-12-20T22:11:31.747Z] [unzip] deflating: C:\Users\krazis\.cache\firebase\emulators\ui-v1.11.7\client\assets\provider-icons\auth_service_oidc.svg
+[debug] [2023-12-20T22:11:31.748Z] [unzip] Entry: client/assets/provider-icons/auth_service_yahoo.svg (compressed_size=577 bytes, uncompressed_size=1182 bytes)
+[debug] [2023-12-20T22:11:31.748Z] [unzip] Processing entry: client\assets\provider-icons\auth_service_yahoo.svg
+[debug] [2023-12-20T22:11:31.748Z] [unzip] else mkdir: C:\Users\krazis\.cache\firebase\emulators\ui-v1.11.7\client\assets\provider-icons
+[debug] [2023-12-20T22:11:31.749Z] [unzip] deflating: C:\Users\krazis\.cache\firebase\emulators\ui-v1.11.7\client\assets\provider-icons\auth_service_yahoo.svg
+[debug] [2023-12-20T22:11:31.750Z] [unzip] Entry: client/assets/provider-icons/auth_service_phone.svg (compressed_size=261 bytes, uncompressed_size=414 bytes)
+[debug] [2023-12-20T22:11:31.750Z] [unzip] Processing entry: client\assets\provider-icons\auth_service_phone.svg
+[debug] [2023-12-20T22:11:31.750Z] [unzip] else mkdir: C:\Users\krazis\.cache\firebase\emulators\ui-v1.11.7\client\assets\provider-icons
+[debug] [2023-12-20T22:11:31.750Z] [unzip] deflating: C:\Users\krazis\.cache\firebase\emulators\ui-v1.11.7\client\assets\provider-icons\auth_service_phone.svg
+[debug] [2023-12-20T22:11:31.753Z] [unzip] Entry: client/assets/provider-icons/auth_service_saml.svg (compressed_size=575 bytes, uncompressed_size=1226 bytes)
+[debug] [2023-12-20T22:11:31.753Z] [unzip] Processing entry: client\assets\provider-icons\auth_service_saml.svg
+[debug] [2023-12-20T22:11:31.753Z] [unzip] else mkdir: C:\Users\krazis\.cache\firebase\emulators\ui-v1.11.7\client\assets\provider-icons
+[debug] [2023-12-20T22:11:31.754Z] [unzip] deflating: C:\Users\krazis\.cache\firebase\emulators\ui-v1.11.7\client\assets\provider-icons\auth_service_saml.svg
+[debug] [2023-12-20T22:11:31.756Z] [unzip] Entry: client/assets/provider-icons/auth_service_mslive.svg (compressed_size=203 bytes, uncompressed_size=378 bytes)
+[debug] [2023-12-20T22:11:31.756Z] [unzip] Processing entry: client\assets\provider-icons\auth_service_mslive.svg
+[debug] [2023-12-20T22:11:31.756Z] [unzip] else mkdir: C:\Users\krazis\.cache\firebase\emulators\ui-v1.11.7\client\assets\provider-icons
+[debug] [2023-12-20T22:11:31.757Z] [unzip] deflating: C:\Users\krazis\.cache\firebase\emulators\ui-v1.11.7\client\assets\provider-icons\auth_service_mslive.svg
+[debug] [2023-12-20T22:11:31.758Z] [unzip] Entry: client/assets/provider-icons/auth_service_facebook.svg (compressed_size=289 bytes, uncompressed_size=457 bytes)
+[debug] [2023-12-20T22:11:31.758Z] [unzip] Processing entry: client\assets\provider-icons\auth_service_facebook.svg
+[debug] [2023-12-20T22:11:31.758Z] [unzip] else mkdir: C:\Users\krazis\.cache\firebase\emulators\ui-v1.11.7\client\assets\provider-icons
+[debug] [2023-12-20T22:11:31.759Z] [unzip] deflating: C:\Users\krazis\.cache\firebase\emulators\ui-v1.11.7\client\assets\provider-icons\auth_service_facebook.svg
+[debug] [2023-12-20T22:11:31.760Z] [unzip] Entry: client/assets/provider-icons/auth_service_play_games.svg (compressed_size=565 bytes, uncompressed_size=1173 bytes)
+[debug] [2023-12-20T22:11:31.760Z] [unzip] Processing entry: client\assets\provider-icons\auth_service_play_games.svg
+[debug] [2023-12-20T22:11:31.760Z] [unzip] else mkdir: C:\Users\krazis\.cache\firebase\emulators\ui-v1.11.7\client\assets\provider-icons
+[debug] [2023-12-20T22:11:31.761Z] [unzip] deflating: C:\Users\krazis\.cache\firebase\emulators\ui-v1.11.7\client\assets\provider-icons\auth_service_play_games.svg
+[debug] [2023-12-20T22:11:31.762Z] [unzip] Entry: client/assets/provider-icons/auth_service_github.svg (compressed_size=466 bytes, uncompressed_size=838 bytes)
+[debug] [2023-12-20T22:11:31.762Z] [unzip] Processing entry: client\assets\provider-icons\auth_service_github.svg
+[debug] [2023-12-20T22:11:31.762Z] [unzip] else mkdir: C:\Users\krazis\.cache\firebase\emulators\ui-v1.11.7\client\assets\provider-icons
+[debug] [2023-12-20T22:11:31.763Z] [unzip] deflating: C:\Users\krazis\.cache\firebase\emulators\ui-v1.11.7\client\assets\provider-icons\auth_service_github.svg
+[debug] [2023-12-20T22:11:31.764Z] [unzip] Entry: client/assets/provider-icons/auth_service_apple.svg (compressed_size=230 bytes, uncompressed_size=334 bytes)
+[debug] [2023-12-20T22:11:31.764Z] [unzip] Processing entry: client\assets\provider-icons\auth_service_apple.svg
+[debug] [2023-12-20T22:11:31.764Z] [unzip] else mkdir: C:\Users\krazis\.cache\firebase\emulators\ui-v1.11.7\client\assets\provider-icons
+[debug] [2023-12-20T22:11:31.765Z] [unzip] deflating: C:\Users\krazis\.cache\firebase\emulators\ui-v1.11.7\client\assets\provider-icons\auth_service_apple.svg
+[debug] [2023-12-20T22:11:31.766Z] [unzip] Entry: client/assets/provider-icons/auth_service_google.svg (compressed_size=409 bytes, uncompressed_size=720 bytes)
+[debug] [2023-12-20T22:11:31.767Z] [unzip] Processing entry: client\assets\provider-icons\auth_service_google.svg
+[debug] [2023-12-20T22:11:31.767Z] [unzip] else mkdir: C:\Users\krazis\.cache\firebase\emulators\ui-v1.11.7\client\assets\provider-icons
+[debug] [2023-12-20T22:11:31.767Z] [unzip] deflating: C:\Users\krazis\.cache\firebase\emulators\ui-v1.11.7\client\assets\provider-icons\auth_service_google.svg
+[debug] [2023-12-20T22:11:31.769Z] [unzip] Entry: client/assets/provider-icons/auth_service_email.svg (compressed_size=228 bytes, uncompressed_size=326 bytes)
+[debug] [2023-12-20T22:11:31.769Z] [unzip] Processing entry: client\assets\provider-icons\auth_service_email.svg
+[debug] [2023-12-20T22:11:31.769Z] [unzip] else mkdir: C:\Users\krazis\.cache\firebase\emulators\ui-v1.11.7\client\assets\provider-icons
+[debug] [2023-12-20T22:11:31.770Z] [unzip] deflating: C:\Users\krazis\.cache\firebase\emulators\ui-v1.11.7\client\assets\provider-icons\auth_service_email.svg
+[debug] [2023-12-20T22:11:31.771Z] [unzip] Entry: client/assets/provider-icons/auth_service_twitter.svg (compressed_size=444 bytes, uncompressed_size=751 bytes)
+[debug] [2023-12-20T22:11:31.771Z] [unzip] Processing entry: client\assets\provider-icons\auth_service_twitter.svg
+[debug] [2023-12-20T22:11:31.771Z] [unzip] else mkdir: C:\Users\krazis\.cache\firebase\emulators\ui-v1.11.7\client\assets\provider-icons
+[debug] [2023-12-20T22:11:31.771Z] [unzip] deflating: C:\Users\krazis\.cache\firebase\emulators\ui-v1.11.7\client\assets\provider-icons\auth_service_twitter.svg
+[debug] [2023-12-20T22:11:31.773Z] [unzip] Entry: client/assets/provider-icons/auth_service_game_center.svg (compressed_size=991 bytes, uncompressed_size=3921 bytes)
+[debug] [2023-12-20T22:11:31.773Z] [unzip] Processing entry: client\assets\provider-icons\auth_service_game_center.svg
+[debug] [2023-12-20T22:11:31.773Z] [unzip] else mkdir: C:\Users\krazis\.cache\firebase\emulators\ui-v1.11.7\client\assets\provider-icons
+[debug] [2023-12-20T22:11:31.774Z] [unzip] deflating: C:\Users\krazis\.cache\firebase\emulators\ui-v1.11.7\client\assets\provider-icons\auth_service_game_center.svg
+[debug] [2023-12-20T22:11:31.775Z] [unzip] Entry: client/assets/index.c2583d42.js.map (compressed_size=1778557 bytes, uncompressed_size=7961927 bytes)
+[debug] [2023-12-20T22:11:31.775Z] [unzip] Processing entry: client\assets\index.c2583d42.js.map
+[debug] [2023-12-20T22:11:31.775Z] [unzip] else mkdir: C:\Users\krazis\.cache\firebase\emulators\ui-v1.11.7\client\assets
+[debug] [2023-12-20T22:11:31.776Z] [unzip] deflating: C:\Users\krazis\.cache\firebase\emulators\ui-v1.11.7\client\assets\index.c2583d42.js.map
+[debug] [2023-12-20T22:11:31.824Z] [unzip] Entry: client/assets/img/ (compressed_size=0 bytes, uncompressed_size=0 bytes)
+[debug] [2023-12-20T22:11:31.824Z] [unzip] Processing entry: client\assets\img\
+[debug] [2023-12-20T22:11:31.824Z] [unzip] mkdir: C:\Users\krazis\.cache\firebase\emulators\ui-v1.11.7\client\assets\img\
+[debug] [2023-12-20T22:11:31.825Z] [unzip] Entry: client/assets/img/database.png (compressed_size=29449 bytes, uncompressed_size=29988 bytes)
+[debug] [2023-12-20T22:11:31.825Z] [unzip] Processing entry: client\assets\img\database.png
+[debug] [2023-12-20T22:11:31.825Z] [unzip] else mkdir: C:\Users\krazis\.cache\firebase\emulators\ui-v1.11.7\client\assets\img
+[debug] [2023-12-20T22:11:31.825Z] [unzip] deflating: C:\Users\krazis\.cache\firebase\emulators\ui-v1.11.7\client\assets\img\database.png
+[debug] [2023-12-20T22:11:31.826Z] [unzip] Entry: client/safari-pinned-tab.svg (compressed_size=838 bytes, uncompressed_size=1504 bytes)
+[debug] [2023-12-20T22:11:31.826Z] [unzip] Processing entry: client\safari-pinned-tab.svg
+[debug] [2023-12-20T22:11:31.827Z] [unzip] else mkdir: C:\Users\krazis\.cache\firebase\emulators\ui-v1.11.7\client
+[debug] [2023-12-20T22:11:31.827Z] [unzip] deflating: C:\Users\krazis\.cache\firebase\emulators\ui-v1.11.7\client\safari-pinned-tab.svg
+[debug] [2023-12-20T22:11:31.828Z] [unzip] Entry: client/mstile-150x150.png (compressed_size=5406 bytes, uncompressed_size=5723 bytes)
+[debug] [2023-12-20T22:11:31.828Z] [unzip] Processing entry: client\mstile-150x150.png
+[debug] [2023-12-20T22:11:31.828Z] [unzip] else mkdir: C:\Users\krazis\.cache\firebase\emulators\ui-v1.11.7\client
+[debug] [2023-12-20T22:11:31.829Z] [unzip] deflating: C:\Users\krazis\.cache\firebase\emulators\ui-v1.11.7\client\mstile-150x150.png
+[debug] [2023-12-20T22:11:31.830Z] [unzip] Entry: client/browserconfig.xml (compressed_size=491 bytes, uncompressed_size=822 bytes)
+[debug] [2023-12-20T22:11:31.830Z] [unzip] Processing entry: client\browserconfig.xml
+[debug] [2023-12-20T22:11:31.830Z] [unzip] else mkdir: C:\Users\krazis\.cache\firebase\emulators\ui-v1.11.7\client
+[debug] [2023-12-20T22:11:31.830Z] [unzip] deflating: C:\Users\krazis\.cache\firebase\emulators\ui-v1.11.7\client\browserconfig.xml
+[debug] [2023-12-20T22:11:31.831Z] [unzip] Entry: client/robots.txt (compressed_size=26 bytes, uncompressed_size=26 bytes)
+[debug] [2023-12-20T22:11:31.832Z] [unzip] Processing entry: client\robots.txt
+[debug] [2023-12-20T22:11:31.832Z] [unzip] else mkdir: C:\Users\krazis\.cache\firebase\emulators\ui-v1.11.7\client
+[debug] [2023-12-20T22:11:31.832Z] [unzip] Writing file: C:\Users\krazis\.cache\firebase\emulators\ui-v1.11.7\client\robots.txt
+[debug] [2023-12-20T22:11:31.833Z] [unzip] Entry: client/index.html (compressed_size=1363 bytes, uncompressed_size=3064 bytes)
+[debug] [2023-12-20T22:11:31.834Z] [unzip] Processing entry: client\index.html
+[debug] [2023-12-20T22:11:31.834Z] [unzip] else mkdir: C:\Users\krazis\.cache\firebase\emulators\ui-v1.11.7\client
+[debug] [2023-12-20T22:11:31.834Z] [unzip] deflating: C:\Users\krazis\.cache\firebase\emulators\ui-v1.11.7\client\index.html
+[debug] [2023-12-20T22:11:31.836Z] [unzip] Entry: client/favicon-16x16.png (compressed_size=757 bytes, uncompressed_size=777 bytes)
+[debug] [2023-12-20T22:11:31.836Z] [unzip] Processing entry: client\favicon-16x16.png
+[debug] [2023-12-20T22:11:31.836Z] [unzip] else mkdir: C:\Users\krazis\.cache\firebase\emulators\ui-v1.11.7\client
+[debug] [2023-12-20T22:11:31.836Z] [unzip] deflating: C:\Users\krazis\.cache\firebase\emulators\ui-v1.11.7\client\favicon-16x16.png
+[debug] [2023-12-20T22:11:31.838Z] [unzip] Entry: client/manifest.json (compressed_size=246 bytes, uncompressed_size=551 bytes)
+[debug] [2023-12-20T22:11:31.838Z] [unzip] Processing entry: client\manifest.json
+[debug] [2023-12-20T22:11:31.839Z] [unzip] else mkdir: C:\Users\krazis\.cache\firebase\emulators\ui-v1.11.7\client
+[debug] [2023-12-20T22:11:31.839Z] [unzip] deflating: C:\Users\krazis\.cache\firebase\emulators\ui-v1.11.7\client\manifest.json
+[debug] [2023-12-20T22:11:31.840Z] [unzip] Entry: client/favicon-32x32.png (compressed_size=1175 bytes, uncompressed_size=1175 bytes)
+[debug] [2023-12-20T22:11:31.841Z] [unzip] Processing entry: client\favicon-32x32.png
+[debug] [2023-12-20T22:11:31.841Z] [unzip] else mkdir: C:\Users\krazis\.cache\firebase\emulators\ui-v1.11.7\client
+[debug] [2023-12-20T22:11:31.841Z] [unzip] Writing file: C:\Users\krazis\.cache\firebase\emulators\ui-v1.11.7\client\favicon-32x32.png
+[debug] [2023-12-20T22:11:31.842Z] [unzip] Entry: client/android-chrome-192x192.png (compressed_size=7602 bytes, uncompressed_size=7834 bytes)
+[debug] [2023-12-20T22:11:31.842Z] [unzip] Processing entry: client\android-chrome-192x192.png
+[debug] [2023-12-20T22:11:31.843Z] [unzip] else mkdir: C:\Users\krazis\.cache\firebase\emulators\ui-v1.11.7\client
+[debug] [2023-12-20T22:11:31.843Z] [unzip] deflating: C:\Users\krazis\.cache\firebase\emulators\ui-v1.11.7\client\android-chrome-192x192.png
+[debug] [2023-12-20T22:11:31.844Z] [unzip] Entry: server/ (compressed_size=0 bytes, uncompressed_size=0 bytes)
+[debug] [2023-12-20T22:11:31.844Z] [unzip] Processing entry: server\
+[debug] [2023-12-20T22:11:31.844Z] [unzip] mkdir: C:\Users\krazis\.cache\firebase\emulators\ui-v1.11.7\server\
+[debug] [2023-12-20T22:11:31.845Z] [unzip] Entry: server/server.js (compressed_size=343746 bytes, uncompressed_size=1346374 bytes)
+[debug] [2023-12-20T22:11:31.845Z] [unzip] Processing entry: server\server.js
+[debug] [2023-12-20T22:11:31.845Z] [unzip] else mkdir: C:\Users\krazis\.cache\firebase\emulators\ui-v1.11.7\server
+[debug] [2023-12-20T22:11:31.845Z] [unzip] deflating: C:\Users\krazis\.cache\firebase\emulators\ui-v1.11.7\server\server.js
+[debug] [2023-12-20T22:11:31.856Z] [unzip] Entry: server/server.js.map (compressed_size=289157 bytes, uncompressed_size=1325651 bytes)
+[debug] [2023-12-20T22:11:31.856Z] [unzip] Processing entry: server\server.js.map
+[debug] [2023-12-20T22:11:31.856Z] [unzip] else mkdir: C:\Users\krazis\.cache\firebase\emulators\ui-v1.11.7\server
+[debug] [2023-12-20T22:11:31.856Z] [unzip] deflating: C:\Users\krazis\.cache\firebase\emulators\ui-v1.11.7\server\server.js.map
+[debug] [2023-12-20T22:11:31.866Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2023-12-20T22:11:31.866Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: port"}}
+[debug] [2023-12-20T22:11:31.866Z] Starting Emulator UI with command {"binary":"node","args":["C:\\Users\\krazis\\.cache\\firebase\\emulators\\ui-v1.11.7\\server\\server.js"],"optionalArgs":[],"joinArgs":false} {"metadata":{"emulator":{"name":"ui"},"message":"Starting Emulator UI with command {\"binary\":\"node\",\"args\":[\"C:\\\\Users\\\\krazis\\\\.cache\\\\firebase\\\\emulators\\\\ui-v1.11.7\\\\server\\\\server.js\"],\"optionalArgs\":[],\"joinArgs\":false}"}}
+[info] i  ui: Emulator UI logging to ui-debug.log {"metadata":{"emulator":{"name":"ui"},"message":"Emulator UI logging to \u001b[1mui-debug.log\u001b[22m"}}
+[debug] [2023-12-20T22:11:32.026Z] Web / API server started at 127.0.0.1:9098
+ {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at 127.0.0.1:9098\n"}}
+[debug] [2023-12-20T22:11:32.026Z] Web / API server started at ::1:9098
+ {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at ::1:9098\n"}}
+[info] 
+┌─────────────────────────────────────────────────────────────┐
+│ ✔  All emulators ready! It is now safe to connect your app. │
+│ i  View Emulator UI at http://127.0.0.1:9098/               │
+└─────────────────────────────────────────────────────────────┘
+
+┌────────────────┬──────────────────────────────────┬─────────────────────────────────┐
+│ Emulator       │ Host:Port                        │ View in Emulator UI             │
+├────────────────┼──────────────────────────────────┼─────────────────────────────────┤
+│ Authentication │ 127.0.0.1:9090                   │ http://127.0.0.1:9098/auth      │
+├────────────────┼──────────────────────────────────┼─────────────────────────────────┤
+│ Functions      │ Failed to initialize (see above) │                                 │
+├────────────────┼──────────────────────────────────┼─────────────────────────────────┤
+│ Firestore      │ 127.0.0.1:9092                   │ http://127.0.0.1:9098/firestore │
+├────────────────┼──────────────────────────────────┼─────────────────────────────────┤
+│ Database       │ 127.0.0.1:9093                   │ http://127.0.0.1:9098/database  │
+├────────────────┼──────────────────────────────────┼─────────────────────────────────┤
+│ Hosting        │ Failed to initialize (see above) │                                 │
+├────────────────┼──────────────────────────────────┼─────────────────────────────────┤
+│ Pub/Sub        │ 127.0.0.1:9095                   │ n/a                             │
+├────────────────┼──────────────────────────────────┼─────────────────────────────────┤
+│ Storage        │ 127.0.0.1:9096                   │ http://127.0.0.1:9098/storage   │
+├────────────────┼──────────────────────────────────┼─────────────────────────────────┤
+│ Eventarc       │ Failed to initialize (see above) │                                 │
+└────────────────┴──────────────────────────────────┴─────────────────────────────────┘
+  Emulator Hub running at 127.0.0.1:4400
+  Other reserved ports: 4500, 9150
+
+Issues? Report them at https://github.com/firebase/firebase-tools/issues and attach the *-debug.log files.
+ 
+[debug] [2023-12-20T22:11:38.807Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/note-d3618/adminSdkConfig [none]
+[debug] [2023-12-20T22:11:39.112Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/note-d3618/adminSdkConfig 200
+[debug] [2023-12-20T22:11:39.112Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/note-d3618/adminSdkConfig {"projectId":"note-d3618","databaseURL":"https://note-d3618-default-rtdb.europe-west1.firebasedatabase.app","storageBucket":"note-d3618.appspot.com"}
+[info] i  storage: Change detected, updating rules for Cloud Storage... {"metadata":{"emulator":{"name":"storage"},"message":"Change detected, updating rules for Cloud Storage..."}}

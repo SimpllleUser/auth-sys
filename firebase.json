@@ -1,0 +1,37 @@
+{
+  "emulators": {
+    "auth": {
+      "port": 9090
+    },
+    "functions": {
+      "port": 9091
+    },
+    "firestore": {
+      "port": 9092
+    },
+    "database": {
+      "port": 9093
+    },
+    "hosting": {
+      "port": 9094
+    },
+    "pubsub": {
+      "port": 9095
+    },
+    "storage": {
+      "port": 9096
+    },
+    "eventarc": {
+      "port": 9097
+    },
+    "ui": {
+      "enabled": true,
+      "port": 9098
+    },
+    
+    "singleProjectMode": true
+  },
+  "storage": {
+    "rules": "./storage.rules"
+  }
+}

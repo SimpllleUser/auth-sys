@@ -15,6 +15,8 @@ describe('MyComponent', () => {
   it('Is valid token in API after call set token', async () => {
     const token = 'testToken';
 
+    console.log(process.env);
+
     /// Set some token text
     setAuthToken(token);
     expect(api.defaults.headers.common.Authorization).toBe(token);
