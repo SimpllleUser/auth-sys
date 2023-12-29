@@ -243,3 +243,4 @@ Issues? Report them at https://github.com/firebase/firebase-tools/issues and att
 [debug] [2023-12-20T22:11:39.112Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/note-d3618/adminSdkConfig 200
 [debug] [2023-12-20T22:11:39.112Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/note-d3618/adminSdkConfig {"projectId":"note-d3618","databaseURL":"https://note-d3618-default-rtdb.europe-west1.firebasedatabase.app","storageBucket":"note-d3618.appspot.com"}
 [info] i  storage: Change detected, updating rules for Cloud Storage... {"metadata":{"emulator":{"name":"storage"},"message":"Change detected, updating rules for Cloud Storage..."}}
+[debug] [2023-12-20T22:17:09.494Z] Received signal SIGHUP 1
