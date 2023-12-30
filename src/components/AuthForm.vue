@@ -50,5 +50,3 @@ const onSubmit = async () => {
 </template>
 
 <style scoped></style>
-@/services/emailPassword-auth.service
-../store/custom-auth
