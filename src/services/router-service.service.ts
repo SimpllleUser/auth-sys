@@ -11,14 +11,14 @@ interface RedirectToAccessPage {
   // firstAccesdPageName: string
 }
 
-const PAGE_NAME_LOGIN = 'Login';
-
 const makePrivateRoute = (router: RouteRecordRaw): GuardedPath => ({
   ...router,
   meta: { ...router.meta, requiresAuth: true },
 });
 
 // export const isRequiresAuth = (route: BaseRoute) => route.meta?.requiresAuth
+
+export const PAGE_NAME_LOGIN = 'Login';
 
 export const setRoutesForAuthedUsers = (
   routesForAuthedUsers: Array<RouteRecordRaw>,
