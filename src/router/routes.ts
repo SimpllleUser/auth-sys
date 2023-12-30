@@ -1,5 +1,5 @@
 import { RouteRecordRaw } from 'vue-router';
-import { setRoutesForAuthedUsers } from '@/services/router-service.service';
+import { setRoutesForAuthedUsers } from '@/services/router.service';
 
 export const routes: Array<RouteRecordRaw> = [
   ...setRoutesForAuthedUsers([

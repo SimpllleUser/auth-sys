@@ -6,7 +6,7 @@ import {
   initOnChecGuardedRoutes,
   setRoutesForAuthedUsers,
   redirectToAccessPage,
-} from '../../../src/services/router-service.service';
+} from '../../../src/services/router.service';
 import { BaseUser } from '@/services/base-auth.service';
 
 const mockUser: BaseUser = {

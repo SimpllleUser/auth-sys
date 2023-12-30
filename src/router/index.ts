@@ -2,7 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router';
 
 import { routes } from '../router/routes';
 import { storage } from '@/services/local-storage.service';
-import { initOnChecGuardedRoutes, redirectToAccessPage } from '../services/router-service.service';
+import { initOnChecGuardedRoutes, redirectToAccessPage } from '../services/router.service';
 
 const router = createRouter({
   history: createWebHistory(),
